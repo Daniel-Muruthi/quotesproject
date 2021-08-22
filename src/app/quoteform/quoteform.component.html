@@ -4,11 +4,15 @@
         <div>Author ~ {{inputform.author}}</div>
         <div>Added By ~ {{inputform.submitter}}</div>
         <div class="my-3 quotebuttons">
-            <button class="btn btn-danger">Delete Quote</button>
             <div class="votes">
-                <button class="btn btn-success mx-4">Upvote</button>
-                <button class="btn btn-danger">Downvote</button>
+                <span>
+                    <button class="btn btn-success mx-4">Upvote</button>{{votes}} votes
+                </span>
+                <span>
+                    <button class="btn btn-danger">Downvote</button>  {{votes}} votes
+                </span>
             </div>
+            <button class="btn btn-danger">Delete Quote</button>
         </div>
     </div>
 </div>

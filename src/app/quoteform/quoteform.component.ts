@@ -12,8 +12,10 @@ export class QuoteformComponent implements OnInit {
     submitter:"Daniel"},
     {quote: "Lorem ipsum dolor sit amet", author: "Anonymous", submitter:"Daniel Mutua"},
     {quote: "Lorem ipsum dolor sit amet", author: "Anonymous", submitter:"Daniel Muthama"}
-  
-];
+  ];
+
+  votes: number=0;
+
 
   constructor() { }
 
