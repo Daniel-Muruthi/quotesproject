@@ -1,0 +1,24 @@
+<form name="quoteRealForm">
+    <div class="card formBody" >
+        <div>
+            <p>Enter Your Name</p>
+            <div id="identity">
+                <input placeholder="enter your name" class="form-control" name="identity" ngModel required>
+            </div>
+        </div>
+        <div>
+            <p>Post Quote</p>
+            <div>
+                <textarea id="inputQuote" name= "inputQuote" rows="5" cols="50" placeholder="Your inspirational quote here..." ngModel required></textarea>
+            </div>
+        </div>
+        <div>
+            <p>Quote Author</p>
+            <div>
+                <input id="authorName" placeholder="enter the author's name" name="authorName" class="form-control" ngModel required>
+            </div>
+        </div>
+        <button class="btn btn-primary my-4" style="align-self:center;" type="submit">Create Quote</button>
+    </div>
+
+</form>

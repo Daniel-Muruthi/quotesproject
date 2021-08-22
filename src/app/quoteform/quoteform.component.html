@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="card p-3 cardbody my-4" *ngFor="let inputform of quotations" >
+        <div>{{inputform.quote}}</div>
+        <div>Author ~ {{inputform.author}}</div>
+        <div>Added By ~ {{inputform.submitter}}</div>
+        <div class="my-3 quotebuttons">
+            <button class="btn btn-danger">Delete Quote</button>
+            <div class="votes">
+                <button class="btn btn-success mx-4">Upvote</button>
+                <button class="btn btn-danger">Downvote</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

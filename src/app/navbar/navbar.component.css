@@ -1,0 +1,15 @@
+.navbody{
+    display:flex;
+    justify-content: space-between;
+    box-shadow:0px 0px 4px 1px grey !important;
+}
+.navcontent{
+    align-self:center;
+}
+.navlist{
+    display:flex;
+    justify-content: center;
+    margin:auto 1rem;
+    font-size:x-large;
+    font-weight:bold;
+}
