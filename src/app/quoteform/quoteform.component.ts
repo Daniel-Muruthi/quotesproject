@@ -31,6 +31,9 @@ export class QuoteformComponent implements OnInit {
       this.dvotes=0;
     }
   }
+  delete(){
+    
+  }
 
   constructor() { }
 
