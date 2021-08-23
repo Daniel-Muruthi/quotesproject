@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+
 @Component({
   selector: 'app-dataform',
   templateUrl: './dataform.component.html',
@@ -8,14 +8,17 @@ import { NgForm } from '@angular/forms';
 
 
 export class DataformComponent implements OnInit {
-  constructor() { 
+  constructor(
+
+  ) { 
 
   }
 
   ngOnInit(): void {
   }
 
-  log(x?: any) {
+  log(x?: any){
     console.log(x);
   }
+
 }

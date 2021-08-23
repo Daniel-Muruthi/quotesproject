@@ -8,10 +8,10 @@ import { Inputform } from '../inputform';
 })
 export class QuoteformComponent implements OnInit {
   quotations:Inputform[]= [{
-    quote: "Lorem Ipsum dolor sit amet",author:"Anonymous",
-    submitter:"Daniel"},
-    {quote: "Lorem ipsum dolor sit amet", author: "Anonymous", submitter:"Daniel Mutua"},
-    {quote: "Lorem ipsum dolor sit amet", author: "Anonymous", submitter:"Daniel Muthama"}
+    quote: "The way to get started is to quit talking and begin doing",author:"Walt Disney",
+    submitter:"Daniel Muruthi"},
+    {quote: "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. ", author: "James Cameron", submitter:"Adino Muruthi"},
+    {quote: "Don't judge each day by the harvest you reap but by the seeds that you plant.", author: "Robert Louis Stevenson", submitter:"Jara-El"}
   ];
 
   
