@@ -1,4 +1,4 @@
-<form>
+<form #quoteAllForm='ngForm'>
     <div class="card formBody my-4" >
         <div class="form-group">
             <p>Enter Your Name</p>
@@ -7,12 +7,12 @@
         </div>
         <div class="form-group">
             <p>Post Quote</p>
-            <textarea id="inputquote" name= "inputquote" rows="5" cols="50" placeholder="Your inspirational quote here..." ngModel #inputquote="ngModel" required></textarea>
+            <textarea id="inputquote" name= "inputquote" rows="5" cols="50" placeholder="Your inspirational quote here..." ngModel #inputquote="ngModel" required class="form-control"></textarea>
             <div class="alert alert-danger my-2" *ngIf="inputquote.touched && !inputquote.valid">Please enter your quote</div>
         </div>
         <div class="form-group">
             <p>Quote Author</p>
-            <input id="authorName" placeholder="enter the author's name" name="authorName" ngModel minlength="3" ngModel #authorName="ngModel" (change)="log(authorName)" required>
+            <input id="authorName" placeholder="enter the author's name" name="authorName" ngModel minlength="3" ngModel #authorName="ngModel" (change)="log(authorName)" required class="form-control">
             <div class="alert alert-danger my-2" *ngIf="authorName.touched && !authorName.valid">Please enter the Author's name</div>
         </div>
         <button class="btn btn-primary my-4" style="align-self:center;" type="submit">Create Quote</button>

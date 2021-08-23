@@ -1,6 +1,7 @@
 import { Quote } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Inputform } from '../inputform';
 
 // jina = fixture.debugElement.queryAll(By.css('.identity'));
 // identity = jina[0].nativeElement;
@@ -51,4 +52,6 @@ export class DataformComponent implements OnInit {
 
   //   }
   // }
+
+  quote = new Inputform();
 }
