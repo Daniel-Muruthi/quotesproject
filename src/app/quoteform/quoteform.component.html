@@ -1,15 +1,15 @@
 <div class="container">
-    <div class="card p-3 cardbody my-4" *ngFor="let inputform of quotations" >
+    <div class="card p-3 cardbody my-4" *ngFor="let inputform of quotations" ng-repeat="addition in quotecollection">
         <div>{{inputform.quote}}</div>
         <div>Author ~ {{inputform.author}}</div>
         <div>Added By ~ {{inputform.submitter}}</div>
         <div class="my-3 quotebuttons">
             <div class="votes">
-                <span>
-                    <button class="btn btn-success mx-4">Upvote</button>{{votes}} votes
+                <span class="mr-3">
+                    <button class="btn btn-success mx-2"  (click)="upvote()">Upvote</button>{{uvotes}} votes
                 </span>
-                <span>
-                    <button class="btn btn-danger">Downvote</button>  {{votes}} votes
+                <span class="mx-3">
+                    <button class="btn btn-danger mx-2" (click)="downvote()">Downvote</button>  {{dvotes}} votes
                 </span>
             </div>
             <button class="btn btn-danger">Delete Quote</button>
