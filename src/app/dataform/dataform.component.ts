@@ -51,5 +51,5 @@ export class DataformComponent implements OnInit {
   //   }
   // }
 
-  quote = new Inputform();
+  // document.querySelector
 }
