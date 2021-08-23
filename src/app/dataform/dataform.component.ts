@@ -40,9 +40,7 @@ export class DataformComponent implements OnInit {
 
   //   })
   // }
-  log(x?: any){
-    console.log(x);
-  }
+
   // onSubmit(){
   //   if(this.quotesbody.valid){
 

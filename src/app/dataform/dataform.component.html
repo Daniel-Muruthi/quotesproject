@@ -2,7 +2,7 @@
     <div class="card formBody my-4" >
         <div class="form-group">
             <p>Enter Your Name</p>
-            <input placeholder="enter your name" minlength="3" class="form-control" id="identity" name="identity" ngModel #identity="ngModel" (change)="log(identity)" required>
+            <input placeholder="enter your name" minlength="3" class="form-control" id="identity" name="identity" ngModel #identity="ngModel" required>
             <div class="alert alert-danger my-2" *ngIf="identity.touched && !identity.valid">Please enter your name</div>
         </div>
         <div class="form-group">
@@ -12,7 +12,7 @@
         </div>
         <div class="form-group">
             <p>Quote Author</p>
-            <input id="authorName" placeholder="enter the author's name" name="authorName" ngModel minlength="3" ngModel #authorName="ngModel" (change)="log(authorName)" required class="form-control">
+            <input id="authorName" placeholder="enter the author's name" name="authorName" ngModel minlength="3" ngModel #authorName="ngModel" required class="form-control">
             <div class="alert alert-danger my-2" *ngIf="authorName.touched && !authorName.valid">Please enter the Author's name</div>
         </div>
         <button class="btn btn-primary my-4" style="align-self:center;" type="submit">Create Quote</button>
