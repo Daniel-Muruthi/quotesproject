@@ -1,21 +1,34 @@
-<form #quoteAllForm='ngForm'>
+<form (ngSubmit)="addQuote()"> 
+    <!-- This functionwill add quote when called -->
     <div class="card formBody my-4" >
         <div class="form-group">
-            <p>Enter Your Name</p>
-            <input placeholder="enter your name" minlength="3" class="form-control" id="identity" name="identity" ngModel #identity="ngModel" required>
-            <div class="alert alert-danger my-2" *ngIf="identity.touched && !identity.valid">Please enter your name</div>
+            <p class="my-2">Enter Your Name</p>
+            <br>
+            <input placeholder="Enter your name" minlength="3" class="form-control" id="identity" name="identity" type="text" [(ngModel)]="identity" required>
+            <!-- <div class="alert alert-danger my-2" *ngIf="identity.touched && !identity.valid">Please enter your name</div> -->
         </div>
         <div class="form-group">
             <p>Post Quote</p>
-            <textarea id="inputquote" name= "inputquote" rows="5" cols="50" placeholder="Your inspirational quote here..." ngModel #inputquote="ngModel" required class="form-control"></textarea>
-            <div class="alert alert-danger my-2" *ngIf="inputquote.touched && !inputquote.valid">Please enter your quote</div>
+            <br>
+            <textarea id="inputquote" name= "inputquote" rows="5" cols="50" placeholder="Your inspirational quote here..." [(ngModel)]="inputquote" required class="form-control"></textarea>
+            <!-- <div class="alert alert-danger my-2" *ngIf="inputquote.touched && !inputquote.valid">Please enter your quote</div> -->
         </div>
         <div class="form-group">
             <p>Quote Author</p>
-            <input id="authorName" placeholder="enter the author's name" name="authorName" ngModel minlength="3" ngModel #authorName="ngModel" required class="form-control">
-            <div class="alert alert-danger my-2" *ngIf="authorName.touched && !authorName.valid">Please enter the Author's name</div>
+            <input id="authorName" placeholder="enter the author's name" name="authorName" ngModel minlength="3" [(ngModel)]="authorName" required class="form-control">
+            <!-- <div class="alert alert-danger my-2" *ngIf="authorName.touched && !authorName.valid">Please enter the Author's name</div> -->
         </div>
-        <button class="btn btn-primary my-4" style="align-self:center;" type="submit">Create Quote</button>
+        <button id="create" class="create btn btn-primary my-4" style="align-self:center;" type="submit">Create Quote</button>
     </div>
 
 </form>
+
+<div *ngFor="let inputform of inpforms">
+    <div class="card">
+        <div><p>{{inputform.quote}}</p></div>
+        <div><p>{{inputform.author}}</p></div>
+        <div><p>{{inputform.submitter}}</p></div>
+    </div>
+</div>
+
+

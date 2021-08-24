@@ -3,12 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Inputform } from '../inputform';
 
-// jina = fixture.debugElement.queryAll(By.css('.identity'));
-// identity = jina[0].nativeElement;
-// quotebody: FormGroup;
-// identity: FormControl;
-// inputquote:FormControl;
-// authorName: FormControl;
 @Component({
   selector: 'app-dataform',
   templateUrl: './dataform.component.html',
@@ -16,40 +10,32 @@ import { Inputform } from '../inputform';
 })
 
 export class DataformComponent implements OnInit {
-  constructor(
+  inputquote!: string;
+  authorName!: string;
+  identity!: string;
+  inputform!: Inputform;
 
-  ) { 
+  upvotes:number=0;
+  downvotes:number=0;
 
+  inpforms: Inputform[]=[]
+  constructor() {
+    this.inputform={}
+    this.inpforms.push(this.inputform)
   }
 
   ngOnInit(){
-    // this.createFormControls();
-    // this.createForm();
+
   }
 
-  // createFormControls(){
-  //   this.identity = new FormControl('', Validators.required);
-  //   this.inputquote = new FormControl("", Validators.required);
-  //   this.authorName = new FormControl("", Validators.required);
-  // }
-  // createForm(){
-  //   this.quotebody = new FormGroup({
-  //     identity: this.identity,
-  //     inputquote: this.message,
-  //     authorName: this.authorName
+  addQuote(){
+    this.inputform={}
+    this.inputform.quote=this.inputquote;
+    this.inputform.author=this.authorName;
+    this.inputform.submitter=this.identity;
 
-  //   })
-  // }
+    this.inpforms.push(this.inputform)
+  }
 
-  // onSubmit(){
-  //   if(this.quotesbody.valid){
 
-  //     identity==submitter;
-  //     inputquote==quote;
-  //     authorName==author;
-
-  //   }
-  // }
-
-  // document.querySelector
 }
