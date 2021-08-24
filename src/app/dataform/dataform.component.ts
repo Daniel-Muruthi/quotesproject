@@ -36,6 +36,7 @@ export class DataformComponent implements OnInit {
     this.inputform.quote=this.inputquote;
     this.inputform.author=this.authorName;
     this.inputform.submitter=this.identity;
+    
 
     this.inpforms.push(this.inputform)
   }
