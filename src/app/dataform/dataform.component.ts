@@ -10,6 +10,9 @@ import { Inputform } from '../inputform';
 })
 
 export class DataformComponent implements OnInit {
+  vote!: number;
+  dvote!: number;
+  uvote!: number;
   inputquote!: string;
   authorName!: string;
   identity!: string;
@@ -36,6 +39,31 @@ export class DataformComponent implements OnInit {
 
     this.inpforms.push(this.inputform)
   }
+
+  uvotes: number=0;
+  dvotes: number=0;
+  upVote(){
+    if (this.uvotes>=0){
+      this.uvotes+=1;
+    }else{
+      this.uvotes=0;
+    }
+  }
+  downVote(){
+    if (this.dvotes>=0){
+      this.dvotes+=1;
+    }else{
+      this.dvotes=0;
+    }
+  }
+  deleteQuote(){
+    
+  }
+  show(){
+    
+  }
+
+
 
 
 }

@@ -7,13 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { QuoteformComponent } from './quoteform/quoteform.component';
 import { DataformComponent } from './dataform/dataform.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     QuoteformComponent,
-    DataformComponent
+    DataformComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

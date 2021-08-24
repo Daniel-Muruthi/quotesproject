@@ -18,17 +18,37 @@
             <input id="authorName" placeholder="enter the author's name" name="authorName" ngModel minlength="3" [(ngModel)]="authorName" required class="form-control">
             <!-- <div class="alert alert-danger my-2" *ngIf="authorName.touched && !authorName.valid">Please enter the Author's name</div> -->
         </div>
-        <button id="create" class="create btn btn-primary my-4" style="align-self:center;" type="submit">Create Quote</button>
+        <button id="create" class="create btn btn-primary my-4" style="align-self:center;" (click)=show() type="submit">Create Quote</button>
     </div>
 
 </form>
 
 <div *ngFor="let inputform of inpforms">
+    <div class="container card p-3 cardbody my-4">
+        <div>{{inputform.quote}}</div>
+        <div>Author ~ {{inputform.author}}</div>
+        <div>Added By ~ {{inputform.submitter}}</div>
+        <div class="my-3 quotebuttons">
+            <div class="votes">
+                <span class="mr-3">
+                    <button class="btn btn-success mx-2"  (click)="upVote()">Upvote</button>{{uvotes}} votes
+                </span>
+                <span class="mx-3">
+                    <button class="btn btn-danger mx-2" (click)="downVote()">Downvote</button>  {{dvotes}} votes
+                </span>
+            </div>
+            <button class="btn btn-danger" (click)="deleteQuote()">Delete Quote</button>
+        </div>
+    </div>   
+    
+</div>
+
+<!-- <div *ngFor="let inputform of inpforms">
     <div class="card">
         <div><p>{{inputform.quote}}</p></div>
-        <div><p>{{inputform.author}}</p></div>
-        <div><p>{{inputform.submitter}}</p></div>
+        <div><p>Author ~ {{inputform.author}}</p></div>
+        <div><p>Added By ~ {{inputform.submitter}}</p></div>
     </div>
-</div>
+</div> -->
 
 
