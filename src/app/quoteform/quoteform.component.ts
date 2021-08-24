@@ -15,29 +15,30 @@ export class QuoteformComponent implements OnInit {
   ];
 
   
-  uvotes: number=0;
-  dvotes: number=0;
-  upvote(){
-    if (this.uvotes>=0){
-      this.uvotes+=1;
-    }else{
-      this.uvotes=0;
-    }
-  }
-  downvote(){
-    if (this.dvotes>=0){
-      this.dvotes+=1;
-    }else{
-      this.dvotes=0;
-    }
-  }
-  delete(){
-    
-  }
+  
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  uvotes: number=0;
+  dvotes: number=0;
+  upVote(){
+    if (this.uvotes>=0){
+      this.uvotes+=1;
+    }else{
+      this.uvotes=0;
+    }
+  }
+  downVote(){
+    if (this.dvotes>=0){
+      this.dvotes+=1;
+    }else{
+      this.dvotes=0;
+    }
+  }
+  deleteQuote(){
+    
+  }
 }

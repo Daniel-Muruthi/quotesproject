@@ -6,13 +6,13 @@
         <div class="my-3 quotebuttons">
             <div class="votes">
                 <span class="mr-3">
-                    <button class="btn btn-success mx-2"  (click)="upvote()">Upvote</button>{{uvotes}} votes
+                    <button class="btn btn-success mx-2"  (click)="upVote()">Upvote</button>{{upVote}} votes
                 </span>
                 <span class="mx-3">
-                    <button class="btn btn-danger mx-2" (click)="downvote()">Downvote</button>  {{dvotes}} votes
+                    <button class="btn btn-danger mx-2" (click)="downVote()">Downvote</button>  {{uvotes}} votes
                 </span>
             </div>
-            <button class="btn btn-danger" (click)="delete()">Delete Quote</button>
+            <button class="btn btn-danger" (click)="deleteQuote()">Delete Quote</button>
         </div>
     </div>
 </div>
