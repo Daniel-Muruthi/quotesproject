@@ -13,6 +13,7 @@ export class DataformComponent implements OnInit {
   vote!: number;
   dvote!: number;
   uvote!: number;
+  data!: any;
   inputquote!: string;
   authorName!: string;
   identity!: string;
@@ -36,6 +37,8 @@ export class DataformComponent implements OnInit {
     this.inputform.quote=this.inputquote;
     this.inputform.author=this.authorName;
     this.inputform.submitter=this.identity;
+    this.inputform.upVote=this.upvotes;
+    this.inputform.downVote=this.downvotes;
     
 
     this.inpforms.push(this.inputform)
@@ -44,27 +47,22 @@ export class DataformComponent implements OnInit {
   uvotes: number=0;
   dvotes: number=0;
   upVote(){
-    if (this.uvotes>=0){
-      this.uvotes+=1;
-    }else{
-      this.uvotes=0;
-    }
+    return this.uvotes++;
   }
   downVote(){
-    if (this.dvotes>=0){
-      this.dvotes+=1;
-    }else{
-      this.dvotes=0;
-    }
+    return this.dvotes++;
   }
-  deleteQuote(){
-    
-  }
+
   show(){
     
   }
 
-
+  deleteQuote() {
+    const index: number = this.data.indexOf(this.inputform);
+    if (this.dvotes && this.uvotes !== -1) {
+        this.data.splice(index, 1);
+    }        
+}
 
 
 }
